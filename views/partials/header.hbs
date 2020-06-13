@@ -1,0 +1,65 @@
+{{#if userCustomId}}
+<nav style="background-color:rgb(228, 148, 45), 48);
+" class="navbar navbar-primary bg-white static-top">
+  <div class="container">
+    <a style="color: rgb(228, 26, 26);" class="navbar-brand" href="/home">User-Event Project</a>
+    <form method='POST' action='/logout?_method=DELETE'>
+      <input type="submit" value="Logout">
+    </form>
+  </div>
+  {{else}}
+
+  <nav class="navbar navbar-light bg-light static-top">
+    <div class="container">
+      <a class="navbar-brand" href="/">User-Event Project</a>
+      <a href="/login" class="">SIGN-IN</a>
+      <a href="/register" id='signin_btn' class="">REGISTER</a>
+    </div>
+    {{/if}}
+  </nav>
+  {{!-- <style>
+    body {
+      background: #EB5757;
+      /* fallback for old browsers */
+      background: -webkit-linear-gradient(to right, #000000, #EB5757);
+      /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(to right, #000000, #EB5757);
+      /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    }
+  </style> --}}
+  {{!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Navbar</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Dropdown
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#">Disabled</a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav> --}}

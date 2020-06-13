@@ -1,0 +1,58 @@
+<h1 style="text-align: center;"> {{name}}</h1>
+
+{{#if working}}
+{{else}}
+<form action="/join/{{id}}" method="POST" style="text-align: right;">
+<input type="number" name="role" placeholder="max amount">
+<button type="submit" class="btn btn-success">let's Buy</button>
+</form>
+{{/if}}
+<br>
+<br>
+{{#if current}}
+<h3>Event</h3>
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">purches Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each current}}
+    <tr>
+      <td>{{this.name}}</td>
+      <td>{{this.joiningdate}}</td>
+    </tr>
+    {{/each}}
+    <tr>
+  </tbody>
+</table>
+{{else}}
+<h4>No current user</h4>
+{{/if}}
+{{#if ex}}
+<h3>Ex user</h3>
+<table class="table">
+  <thead class="thead-light">
+    <tr>
+      <th scope="col">Name</th>
+      {{!-- <th scope="col">Role</th> --}}
+      <th scope="col">Time Period</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each ex}}
+    <tr>
+      <td>{{this.name}}</td>
+      {{!-- <td>{{this.role}}</td> --}}
+      <td>{{this.joiningdate}} --- {{this.resignationdate}}</td>
+    </tr>
+    {{/each}}
+    <tr>
+
+  </tbody>
+</table>
+{{else}}
+<h4>No Ex user</h4>
+{{/if}}
